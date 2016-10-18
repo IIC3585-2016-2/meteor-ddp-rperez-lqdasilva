@@ -6,7 +6,7 @@ Meteor es una plataforma full-stack JavaScript para desarrollar aplicaciones web
 
 Este protocolo es utilizado por el framework Meteor para manejar la persistencia de los datos y hacer posible
 comunicación entre el cliente y la base de datos en el servidor. La comunicación es establecida mediante la 
-tecnología Websocket y alternativamente utiliza sockJS para los navegadores que no soportan websocket.
+tecnología Websocket y alternativamente utiliza sockJS para los navegadores que no soportan websocket. Más información en https://www.websocket.org/ 
 
 El protocolo DDP tiene dos funciones principales:
 1. Manejar llamados a procedimientos remotos
