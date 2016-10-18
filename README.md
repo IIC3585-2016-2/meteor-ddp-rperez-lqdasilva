@@ -254,3 +254,12 @@ Then on the client, after subscribing to that publication, we can access the cou
 ```
 Counts.get(`Lists.todoCount.${listId}`)
 ```
+
+# References
+
+https://www.meteor.com/
+https://guide.meteor.com/collections.html (collections)
+https://guide.meteor.com/methods.html 
+https://guide.meteor.com/data-loading.html 
+https://github.com/meteor/guide/blob/master/content/data-loading.md 
+https://guide.meteor.com/accounts.html#userid-ddp 
