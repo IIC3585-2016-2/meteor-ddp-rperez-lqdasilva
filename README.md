@@ -12,7 +12,8 @@ El protocolo DDP tiene dos funciones principales:
 1. Manejar llamados a procedimientos remotos
 2. Gestionar datos, realizando acciones como: agregar, modificar y remover.
 
-Una de las características del framework es que posee información detallada del funcionamiento del protocolo, por lo cual se utiliza un estracto de la información disponible en el repositorio de 
+Una de las características del framework es que posee información detallada del funcionamiento del protocolo, por lo cual se utiliza un estracto de la información disponible que consideramos más importante para enterder como trabaja el protocolo DDP.
+
 
 # Publications and subscriptions
 
@@ -257,9 +258,9 @@ Counts.get(`Lists.todoCount.${listId}`)
 
 # References
 
-https://www.meteor.com/
-https://guide.meteor.com/collections.html (collections)
-https://guide.meteor.com/methods.html 
-https://guide.meteor.com/data-loading.html 
-https://github.com/meteor/guide/blob/master/content/data-loading.md 
-https://guide.meteor.com/accounts.html#userid-ddp 
+* https://www.meteor.com/
+* https://guide.meteor.com/collections.html (collections)
+* https://guide.meteor.com/methods.html 
+* https://guide.meteor.com/data-loading.html 
+* https://github.com/meteor/guide/blob/master/content/data-loading.md 
+* https://guide.meteor.com/accounts.html#userid-ddp 
