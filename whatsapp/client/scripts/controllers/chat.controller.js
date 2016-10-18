@@ -1,6 +1,3 @@
-/**
- * Created by quelves on 10/18/16.
- */
 import Ionic from 'ionic-scripts';
 import { _ } from 'meteor/underscore';
 import { Meteor } from 'meteor/meteor';
@@ -23,6 +20,8 @@ export default class ChatCtrl extends Controller {
                 return Chats.findOne(this.chatId);
             }
         });
+
+        this.autoScroll();
     }
 
     sendMessage() {
@@ -57,7 +56,19 @@ export default class ChatCtrl extends Controller {
         if (this.isCordova) {
             cordova.plugins.Keyboard.close();
         }
+
     }
+    autoScroll() {
+        let recentMessagesNum = this.messages.length;
+
+        this.autorun(() => {
+            const currMessagesNum = this.getCollectionReactively('messages').length;
+        const animate = recentMessagesNum != currMessagesNum;
+        recentMessagesNum = currMessagesNum;
+        this.scrollBottom(animate);
+    });
+    }
+
 
     scrollBottom(animate) {
         this.$timeout(() => {
