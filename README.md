@@ -14,7 +14,7 @@ El protocolo DDP tiene dos funciones principales:
 
 Una de las características del framework es que posee información detallada del funcionamiento del protocolo, por lo cual se utiliza un estracto de la información disponible en el repositorio de 
 
-Publications and subscriptions
+#cabecera h1 Publications and subscriptions
 
 In a traditional, HTTP-based web application, the client and server communicate in a "request-response" fashion. Typically the client makes RESTful HTTP requests to the server and receives HTML or JSON data in response, and there's no way for the server to "push" data to the client when changes happen at the backend.
 
