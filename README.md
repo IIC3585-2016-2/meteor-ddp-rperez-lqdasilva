@@ -27,7 +27,7 @@ So a subscription can be thought of as a set of data that changes over time. Typ
 #Defining a publication
 
 A publication should be defined in a server-only file. For instance, in the Todos example app, we want to publish the set of public lists to all users:
-''''java
+```java
 Meteor.publish('lists.public', function() {
   return Lists.find({
     userId: {$exists: false}
@@ -35,7 +35,7 @@ Meteor.publish('lists.public', function() {
     fields: Lists.publicFields
   });
 });
-''''
+```
 There are a few things to understand about this code block. First, we've named the publication with the unique string lists.public, and that will be how we access it from the client. Second, we are simply returning a Mongo cursor from the publication function. Note that the cursor is filtered to only return certain fields from the collection, as detailed in the Security article.
 
 What that means is that the publication will simply ensure the set of data matching that query is available to any client that subscribes to it. In this case, all lists that do not have a userId setting. So the collection named Lists on the client will have all of the public lists that are available in the server collection named Lists while that subscription is open. In this particular example in the Todos application, the subscription is initialized when the app starts and never stopped, but a later section will talk about subscription life cycle.
