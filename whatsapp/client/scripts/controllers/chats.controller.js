@@ -1,6 +1,3 @@
-/**
- * Created by quelves on 10/18/16.
- */
 import Moment from 'moment';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Chats } from '../../../lib/collections';
@@ -16,11 +13,19 @@ export default class ChatsCtrl extends Controller {
         });
     }
 
+
+    showNewChatModal() {
+        this.NewChat.showModal();
+    }
+
     remove(chat) {
-        Chats.remove(chat._id);
+        this.callMethod('removeChat', chat._id);
     }
 }
 
 ChatsCtrl.$name = 'ChatsCtrl';
+
+
+
 
 
