@@ -256,6 +256,15 @@ Then on the client, after subscribing to that publication, we can access the cou
 Counts.get(`Lists.todoCount.${listId}`)
 ```
 
+# Install y Ejecute demo
+```
+
+meteor npm install
+meteor run --settings settings.json
+
+```
+
+
 # References
 
 * https://www.meteor.com/
