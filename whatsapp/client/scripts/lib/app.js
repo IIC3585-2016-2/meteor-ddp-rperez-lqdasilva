@@ -29,36 +29,35 @@ const App = 'Whatsapp';
 
 // App
 Angular.module(App, [
-    'angular-meteor',
-    'angular-meteor.auth',
-    'angularMoment',
-    'ionic'
+  'angular-meteor',
+  'angular-meteor.auth',
+  'angularMoment',
+  'ionic'
 ]);
 
 new Loader(App)
-    .load(ChatsCtrl)
-    .load(ChatCtrl)
-    .load(ConfirmationCtrl)
-    .load(LoginCtrl)
-    .load(NewChatCtrl)
-    .load(ProfileCtrl)
-    .load(SettingsCtrl)
-    .load(InputDirective)
-    .load(CalendarFilter)
-    .load(ChatNameFilter)
-    .load(ChatPictureFilter)
-    .load(NewChatService)
-    .load(Routes);
-
+  .load(ChatsCtrl)
+  .load(ChatCtrl)
+  .load(ConfirmationCtrl)
+  .load(LoginCtrl)
+  .load(NewChatCtrl)
+  .load(ProfileCtrl)
+  .load(SettingsCtrl)
+  .load(InputDirective)
+  .load(CalendarFilter)
+  .load(ChatNameFilter)
+  .load(ChatPictureFilter)
+  .load(NewChatService)
+  .load(Routes);
 
 // Startup
 if (Meteor.isCordova) {
-    Angular.element(document).on('deviceready', onReady);
+  Angular.element(document).on('deviceready', onReady);
 }
 else {
-    Angular.element(document).ready(onReady);
+  Angular.element(document).ready(onReady);
 }
 
 function onReady() {
-    Angular.bootstrap(document, [App]);
+  Angular.bootstrap(document, [App]);
 }

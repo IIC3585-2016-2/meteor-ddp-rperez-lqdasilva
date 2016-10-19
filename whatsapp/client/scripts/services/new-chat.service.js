@@ -1,28 +1,28 @@
 import { Service } from 'angular-ecmascript/module-helpers';
 
 export default class NewChatService extends Service {
-    constructor() {
-        super(...arguments);
+  constructor() {
+    super(...arguments);
 
-        this.templateUrl = 'client/templates/new-chat.html';
-    }
+    this.templateUrl = 'client/templates/new-chat.html';
+  }
 
-    showModal() {
-        this.scope = this.$rootScope.$new();
+  showModal() {
+    this.scope = this.$rootScope.$new();
 
-        this.$ionicModal.fromTemplateUrl(this.templateUrl, {
-            scope: this.scope
-        })
-            .then((modal) => {
-            this.modal = modal;
-        this.modal.show();
+    this.$ionicModal.fromTemplateUrl(this.templateUrl, {
+      scope: this.scope
+    })
+    .then((modal) => {
+      this.modal = modal;
+      this.modal.show();
     });
-    }
+  }
 
-    hideModal() {
-        this.scope.$destroy();
-        this.modal.remove();
-    }
+  hideModal() {
+    this.scope.$destroy();
+    this.modal.remove();
+  }
 }
 
 NewChatService.$name = 'NewChat';
