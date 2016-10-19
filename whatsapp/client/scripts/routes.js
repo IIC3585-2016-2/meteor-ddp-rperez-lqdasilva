@@ -2,21 +2,12 @@ import { _ } from 'meteor/underscore';
 import { Config, Runner } from 'angular-ecmascript/module-helpers';
 
 class RoutesConfig extends Config {
-    constructor() {
-        super(...arguments);
-
-        this.isAuthorized = ['$auth', this.isAuthorized.bind(this)];
-    }
-
     configure() {
         this.$stateProvider
             .state('tab', {
                 url: '/tab',
                 abstract: true,
-                templateUrl: 'client/templates/tabs.html',
-                resolve: {
-                    user: this.isAuthorized
-                }
+                templateUrl: 'client/templates/tabs.html'
             })
             .state('tab.chats', {
                 url: '/chats',
