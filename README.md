@@ -257,6 +257,7 @@ Counts.get(`Lists.todoCount.${listId}`)
 ```
 
 # Install y Ejecute demo
+Primero deben ubicarse dentro de la carpeta del proyecto: whatapp/ y ejecutar los siguientes comandos
 ```
 
 meteor npm install
